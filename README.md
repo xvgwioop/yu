@@ -208,7 +208,25 @@
     }
   }
 
-  function closeError() {
+    function closeError() {
     document.getElementById('errorBox').classList.add('hidden');
   }
+
+  // ฟังเหตุการณ์กด Enter บนช่อง input
+  const usernameInput = document.getElementById('username');
+  const passwordInput = document.getElementById('password');
+
+  usernameInput.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {  // ถ้ากด Enter
+      login();
+    }
+  });
+
+  passwordInput.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+      login();
+    }
+  });
  </script>
+</body>
+</html>
